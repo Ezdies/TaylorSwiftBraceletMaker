@@ -25,7 +25,7 @@ def find_all_combinations(items, letter_counts, current_combination, results):
     found = False
 
     for i, item in enumerate(items):
-        cleaned_item = item.replace(' ', '')
+        cleaned_item = item.replace(' ', '').replace('\'', '').replace('!','')
         if can_form(cleaned_item, letter_counts):
             found = True
             current_combination.append(item)
